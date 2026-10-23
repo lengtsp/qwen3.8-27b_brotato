@@ -10,6 +10,8 @@ Recorded input tokens **313,379** + output tokens **40** = **313,419 tokens**, f
 
 ## Measurements with recoverable token receipts
 
+The **16 attributable measurements** account for **3,034,643 recorded tokens**: **3,034,168 input + 475 output**. This combines segments across different Danger levels and unknown-label records, including repeated attempts. It is not the token total of one Danger 0 run or a complete account of all historical gameplay. The other 63 retained measurements have no attributable usage total in this export.
+
 | ID | End time (UTC+07) | Danger / Wave | Archive outcome | Input tokens | Output tokens | Recorded total | Distinct assessments |
 |---|---|---|---|---:|---:|---:|---:|
 | MEAS-064 | 2026-10-23T13:42:17+07:00 | unknown / 2 | recorded_completion | 78,981 | 13 | 78,994 | 13 |

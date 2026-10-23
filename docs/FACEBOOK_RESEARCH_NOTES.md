@@ -28,4 +28,6 @@ Eight directions, retained objectives, alternative current paths and projectile 
 
 ## Presentation versions
 
+The post's **3,034,643-token** figure is the sum of attributable response receipts from **16 control segments**, across different Danger levels, repeated attempts and unknown-label records. It includes 3,034,168 input and 475 output tokens; it is not one full run or all historical gameplay. Proposal reuse does not create another inference count. [Accounting table and limitations](TOKEN_USAGE.md) · [Aggregate source](evidence/round-token-usage.json).
+
 The concise [Facebook draft](FACEBOOK_POST_TH.txt) keeps the objective, major techniques, the existing offline CPU result, human handoff and evidence limits. The longer technical/research explanation is preserved in the [Thai project review](PROJECT_REVIEW_TH.md). Additional [system views](SYSTEM_DIAGRAMS.md) and [Danger/Wave ledger](WAVE_PROGRESS.md) provide detail in the research repository without distributing controller code.
