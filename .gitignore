@@ -1,0 +1,18 @@
+# Publish only the research showcase. Keep operational projects outside this tree.
+/*
+!/.gitignore
+!/README.md
+!/THIRD_PARTY_NOTICES.md
+!/docs/
+/docs/*
+!/docs/*.md
+!/docs/*.txt
+!/docs/assets/
+!/docs/evidence/
+/docs/assets/*
+!/docs/assets/SCREENSHOTS.md
+!/docs/assets/workflow-prompt.txt
+!/docs/assets/control-room-live.png
+!/docs/assets/workflow-research.png
+/docs/evidence/*
+!/docs/evidence/*.json

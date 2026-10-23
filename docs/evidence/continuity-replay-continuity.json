@@ -1,0 +1,40 @@
+[
+  {
+    "mode": "scalar",
+    "steps": 25,
+    "measured_steps": 23,
+    "cpu_ms": {
+      "median": 123.2,
+      "max": 141.69
+    },
+    "interval_ms": {
+      "median": 145.406,
+      "max": 164.579
+    },
+    "renewal_gap_ms": {
+      "median": 5.407,
+      "max": 24.581
+    },
+    "gap_steps": 14,
+    "evidence": "offline repeated captured-image replay with memory-only input adapter; not live gameplay"
+  },
+  {
+    "mode": "accelerated",
+    "steps": 25,
+    "measured_steps": 23,
+    "cpu_ms": {
+      "median": 78.52,
+      "max": 100.67
+    },
+    "interval_ms": {
+      "median": 100.994,
+      "max": 131.198
+    },
+    "renewal_gap_ms": {
+      "median": 0,
+      "max": 0
+    },
+    "gap_steps": 0,
+    "evidence": "offline repeated captured-image replay with memory-only input adapter; not live gameplay"
+  }
+]

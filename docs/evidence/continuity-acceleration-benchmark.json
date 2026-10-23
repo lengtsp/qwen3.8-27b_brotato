@@ -1,0 +1,9 @@
+{
+  "scalar": {
+    "median_ms": 121.52
+  },
+  "accelerated": {
+    "median_ms": 71.095
+  },
+  "publication_note": "Historical fixture-specific aggregate timing; raw observations omitted; not a model benchmark."
+}

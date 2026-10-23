@@ -1,0 +1,24 @@
+{
+  "status": "protocol_only_not_measured",
+  "scope": "held-out model classification; separate from full-controller outcomes",
+  "model_checkpoint": null,
+  "model_revision": null,
+  "quantization": null,
+  "prompt_policy_hash": null,
+  "scoring_adapter_hash": null,
+  "dataset_revision": null,
+  "private_observations_redistributed": false,
+  "frame_dimensions_recorded_per_case": true,
+  "split": {"practice_cases": null, "validation_cases": null, "held_out_cases": null},
+  "scene_classification": {"accuracy": null, "macro_f1": null, "abstention_rate": null, "sample_count": null},
+  "direction_proposals": {
+    "agreement_with_reviewed_acceptable_action_set": null,
+    "invalid_or_expired_proposal_rate": null,
+    "ground_truth_action_can_be_nonunique": true,
+    "predicted_survival_probability_calibrated": false
+  },
+  "model_latency_ms": {"p50": null, "p95": null, "warmup_reported_separately": true},
+  "comparison_controls": ["same_held_out_observations", "same_prompt", "same_scoring_policy", "same_image_geometry", "same_abstention_definition"],
+  "full_agent_metrics_reported_separately": ["collection_counter_change", "hp_retention", "survival", "source_to_input_latency", "verified_idle_time"],
+  "missing_values_mean": "not_yet_measured_never_zero_or_assumed_success"
+}

@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-18",
+  "source": "Selected scalar fields from local experiment summaries; private captures and traces omitted",
+  "wave": 1,
+  "danger": 0,
+  "seed": null,
+  "materials_exclude_harvesting": true,
+  "detector_accuracy_measured": false,
+  "causal_improvement_established": false,
+  "trials": [
+    {
+      "trial": "baseline-2",
+      "source_to_ack_median_ms": 192.15050000000002,
+      "combat_material_gain": 22,
+      "cpu_median_ms": 113.11500000000001,
+      "completed": true,
+      "final_hp": "16/16",
+      "eligible_for_comparison": true,
+      "gpu_applied_steps": 0,
+      "acknowledged_steps": 118
+    },
+    {
+      "trial": "memory-1",
+      "source_to_ack_median_ms": 192.64600000000002,
+      "combat_material_gain": 17,
+      "cpu_median_ms": 112.98,
+      "completed": true,
+      "final_hp": "16/16",
+      "eligible_for_comparison": true,
+      "gpu_applied_steps": 0,
+      "acknowledged_steps": 112
+    },
+    {
+      "trial": "cpu-baseline-3",
+      "source_to_ack_median_ms": 183.775,
+      "combat_material_gain": 25,
+      "cpu_median_ms": 115.79,
+      "completed": true,
+      "final_hp": "16/16",
+      "eligible_for_comparison": true,
+      "gpu_applied_steps": 1,
+      "acknowledged_steps": 115
+    },
+    {
+      "trial": "cpu-memory-2",
+      "source_to_ack_median_ms": 208.50400000000002,
+      "combat_material_gain": 23,
+      "cpu_median_ms": 125.985,
+      "completed": true,
+      "final_hp": "16/16",
+      "eligible_for_comparison": true,
+      "gpu_applied_steps": 0,
+      "acknowledged_steps": 106
+    }
+  ],
+  "publication_scope": "Selected aggregate observations; no raw game-reference data or traces"
+}

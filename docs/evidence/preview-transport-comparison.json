@@ -1,0 +1,67 @@
+{
+  "scope": "Three 12-second local preview observations while gameplay was paused; not a controlled gameplay benchmark.",
+  "before": {
+    "transport": "WebRTC",
+    "client_pixels": [
+      1536,
+      864
+    ],
+    "presented_fps": 26.995,
+    "presented_interval_fps": {
+      "count": 46,
+      "median": 27.706,
+      "p95": 38.182,
+      "min": 15.361,
+      "max": 40.733
+    },
+    "native_capture_fps": {
+      "count": 48,
+      "median": 36.215,
+      "p95": 44.01,
+      "min": 28.44,
+      "max": 44.01
+    }
+  },
+  "jpeg_same_client": {
+    "client_pixels": [
+      1536,
+      864
+    ],
+    "image_load_interval_fps_estimate": {
+      "count": 48,
+      "median": 31.727,
+      "p95": 43.397,
+      "min": 15.662,
+      "max": 43.651
+    },
+    "native_capture_fps": {
+      "count": 49,
+      "median": 35.12,
+      "p95": 39.42,
+      "min": 24.38,
+      "max": 39.42
+    }
+  },
+  "after_unlock": {
+    "transport": "Brotato Auto/direct JPEG",
+    "client_pixels": [
+      1514,
+      842
+    ],
+    "image_load_interval_fps_estimate": {
+      "count": 48,
+      "median": 31.79,
+      "p95": 39.394,
+      "min": 7.899,
+      "max": 47.6
+    },
+    "native_capture_fps": {
+      "count": 49,
+      "median": 33.18,
+      "p95": 40.31,
+      "min": 23.61,
+      "max": 40.31
+    }
+  },
+  "limits": "JPEG image-load cadence is not compositor-presented video FPS. Measurements include transient dips and no active-combat samples; no steady 50 FPS or game-engine FPS claim."
+}
