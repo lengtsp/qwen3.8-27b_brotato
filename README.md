@@ -36,13 +36,21 @@ CPU median decreased by approximately **36.27% in this offline replay comparison
 
 ### Recorded Danger / Wave progression
 
-| Danger | Waves with a recorded completion endpoint | Other observed waves without confirmed completion | Recorded death waves |
-|---|---|---|---|
-| 0 | 1, 2, 3, 4 | — | — |
-| 2 | 1, 2, 4 | 7 | — |
-| 4 | 6, 7 | 5, 8 | 8 |
+| Danger | Waves with recorded completion | Observed without confirmed completion | Recorded death waves | User-reported death waves |
+|---|---|---|---|---|
+| 0 | 1, 2, 3, 4, 5, 6 | 7 | — | 7 |
+| 2 | 1, 2, 4 | 7 | — | — |
+| 4 | 6, 7 | 5, 8 | 8 | — |
 
-This snapshot contains **70 canonical retained controller records** after excluding one duplicate legacy baseline; 16 observation-only records are excluded from agent-control claims. Difficulty provenance varies between inspected Pause pixels, operator labels and legacy capture annotations. Unknown Danger/wave records remain separate. A completion endpoint does **not** verify autonomous control of the entire wave, and no full-run victory is established. Missing earlier waves are not inferred from later progress. [Per-wave evidence, HP/counter readings and coverage map](docs/WAVE_PROGRESS.md) · [Sanitized aggregate JSON](docs/evidence/danger-wave-progress.json)
+This reviewed snapshot contains **79 canonical retained controller records** after excluding 1 duplicate legacy baseline; 24 observation-only records are excluded from agent-control claims. A completion endpoint does not establish autonomous full-wave coverage. Unknown labels remain separate; missing earlier waves are not inferred.
+
+Latest requested completion: **Danger 0 / Wave 2**, HP last observed **100%**, **177 command ACKs**, **313,419 recorded model tokens** (313,379 input + 40 output). This is an observed segment total; complete full-round token usage remains unknown.
+
+The user reports a later loss at **Danger 0 / Wave 7**. The retained segment ended before a verified terminal frame; this report is kept distinct from recorded death endpoints.
+
+[Per-wave ledger](docs/WAVE_PROGRESS.md) · [Per-segment tokens and accounting limits](docs/TOKEN_USAGE.md) · [Progress JSON](docs/evidence/danger-wave-progress.json)
+
+[Frame-rate inspection after Wave 7](docs/PERFORMANCE_STATUS.md): WebRTC was configured for 50 FPS, but the observed transport was JPEG, with median reception around 27.9 FPS and capture around 29.2 FPS during a post-game observation. Rendered game FPS remains unmeasured. Recorded command gaps are reported separately.
 
 ### Model-specific evaluation
 

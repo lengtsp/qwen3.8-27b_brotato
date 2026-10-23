@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "report_date": "2026-10-23",
+  "reports": [
+    {
+      "report_id": "OPERATOR-D0-W7-20261023",
+      "danger": 0,
+      "wave": 7,
+      "reported_outcome": "death",
+      "provenance": "explicit_user_report_in_current_session",
+      "associated_measurement_id": "MEAS-079",
+      "archive_outcome": "unresolved_or_interrupted",
+      "archive_end_scene": "operator_stop",
+      "terminal_death_independently_verified": false,
+      "note": "The user reports losing Wave 7. The retained segment stopped before a verified death endpoint; do not replace its last observed HP with zero."
+    }
+  ]
+}

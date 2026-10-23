@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-23",
+  "measurement_type": "read_only_postgame_preview_observation_not_combat_benchmark",
+  "configuration": {
+    "desktop_polling_ceiling_fps": 60,
+    "webrtc_preview_ceiling_fps": 50,
+    "active_transport": "JPEG",
+    "saved_game_limit_fps": false,
+    "explicit_game_fps_launch_flag_found": false,
+    "game_rendered_fps_measured": false,
+    "driver_vsync_display_limits_audited": false
+  },
+  "observations": {
+    "duration_ms": 10003.1,
+    "sample_count": 41,
+    "native_capture_fps": {
+      "count": 41,
+      "median": 29.23,
+      "p95": 29.56,
+      "min": 24.69,
+      "max": 29.56
+    },
+    "jpeg_load_interval_fps_estimate": {
+      "count": 40,
+      "median": 27.861,
+      "p95": 35.54,
+      "min": 11.574,
+      "max": 35.899
+    },
+    "actual_displayed_fps": null,
+    "document_visibility_states": [
+      "visible"
+    ],
+    "visible_video_samples": 0,
+    "playing_samples": 0,
+    "observed_command_count": 0,
+    "no_os_input_sent": true,
+    "no_navigation_or_focus_change": true,
+    "no_control_api_or_inference_calls": true,
+    "javascript_errors": []
+  },
+  "wave7_recorded_control": {
+    "danger": 0,
+    "wave": 7,
+    "acknowledged_steps": 251,
+    "cpu_median_ms": 62.88,
+    "gpu_median_ms": 291.947,
+    "source_to_ack_median_ms": 139.579,
+    "ack_intervals_over_250ms": 31,
+    "max_ack_interval_seconds": 2.33036732673645,
+    "physical_key_holds_or_displacement_verified": false
+  },
+  "settings_changed": false,
+  "death_cause_established": false,
+  "root_cause_isolated": false,
+  "operator_stutter_report_scope": [
+    "actual_game",
+    "control_room"
+  ],
+  "broader_audit_window": {
+    "scope": "overlapping_and_surrounding_control_not_replacement_for_retained_segment_metrics",
+    "wait_reasons_observed": [
+      "player_not_found",
+      "arena_not_grounded_or_overlay"
+    ],
+    "death_or_render_stutter_causation_established": false
+  },
+  "game_frame_time_trace_attempt": {
+    "tool": "PresentMon console",
+    "version": "2.6.0",
+    "upstream_release": "https://github.com/GameTechDev/PresentMon/releases/tag/v2.6.0",
+    "release_sha256_verified": true,
+    "sha256": "b2a706bc6ad475749e3b7e3409263aa1e6906d45bdcf993f6dbc0f660188f1af",
+    "result": "windows_trace_access_denied",
+    "exit_code": 6,
+    "elevation_requested": false,
+    "input_tracking_enabled": false,
+    "installer_or_service_installed": false,
+    "render_fps_result": null
+  }
+}

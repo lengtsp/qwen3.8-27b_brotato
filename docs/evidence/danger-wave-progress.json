@@ -3,11 +3,11 @@
   "snapshot_date": "2026-10-23",
   "measurement_type": "descriptive_retained_record_snapshot_not_win_rate",
   "public_source": "Sanitized aggregates of the local controller episode archive; raw database, captures, trace fingerprints, build details and absolute paths withheld.",
-  "source_controller_records": 71,
-  "source_lifetime_aggregate_segment_count": 71,
+  "source_controller_records": 80,
+  "source_lifetime_aggregate_segment_count": 80,
   "excluded_duplicate_legacy_records": 1,
-  "canonical_controller_records": 70,
-  "excluded_observation_only_records": 16,
+  "canonical_controller_records": 79,
+  "excluded_observation_only_records": 24,
   "overall_full_wave_coverage_explicitly_verified_segments": 0,
   "entire_run_victory_verified": false,
   "independent_trial_win_rate": null,
@@ -23,12 +23,19 @@
         1,
         2,
         3,
-        4
+        4,
+        5,
+        6
       ],
       "recorded_death_waves": [],
-      "observed_without_confirmed_completion_waves": [],
+      "observed_without_confirmed_completion_waves": [
+        7
+      ],
       "completion_records_with_unknown_wave": 0,
-      "full_wave_coverage_explicitly_verified_segments": 0
+      "full_wave_coverage_explicitly_verified_segments": 0,
+      "operator_reported_death_waves": [
+        7
+      ]
     },
     {
       "danger": 2,
@@ -42,7 +49,8 @@
         7
       ],
       "completion_records_with_unknown_wave": 2,
-      "full_wave_coverage_explicitly_verified_segments": 0
+      "full_wave_coverage_explicitly_verified_segments": 0,
+      "operator_reported_death_waves": []
     },
     {
       "danger": 4,
@@ -58,7 +66,8 @@
         8
       ],
       "completion_records_with_unknown_wave": 0,
-      "full_wave_coverage_explicitly_verified_segments": 0
+      "full_wave_coverage_explicitly_verified_segments": 0,
+      "operator_reported_death_waves": []
     }
   ],
   "buckets": [
@@ -88,25 +97,27 @@
     {
       "danger": null,
       "wave": 1,
-      "retained_record_count": 11,
-      "recorded_completion_segments": 6,
+      "retained_record_count": 13,
+      "recorded_completion_segments": 8,
       "recorded_death_segments": 1,
       "unresolved_or_interrupted_segments": 4,
       "full_wave_coverage_explicitly_verified_segments": 0,
       "label_sources": {
         "legacy_inspected_capture_annotation": 3,
-        "unknown_after_wave_reset": 7,
-        "unknown": 1
+        "unknown_after_wave_reset": 8,
+        "unknown": 1,
+        "unknown_after_capture_change": 1
       },
       "completion_label_sources": {
-        "unknown_after_wave_reset": 5,
-        "unknown": 1
+        "unknown_after_wave_reset": 6,
+        "unknown": 1,
+        "unknown_after_capture_change": 1
       },
       "measurement_scopes": {
-        "control_segment": 11
+        "control_segment": 13
       },
       "best_hp_fraction_at_recorded_completion": 1.0,
-      "completion_hp_reading_count": 6,
+      "completion_hp_reading_count": 8,
       "best_in_combat_counter_gain_at_recorded_completion": 22,
       "completion_counter_gain_reading_count": 3,
       "first_recorded_date": "2026-10-18",
@@ -300,6 +311,29 @@
     },
     {
       "danger": 0,
+      "wave": null,
+      "retained_record_count": 1,
+      "recorded_completion_segments": 0,
+      "recorded_death_segments": 0,
+      "unresolved_or_interrupted_segments": 1,
+      "full_wave_coverage_explicitly_verified_segments": 0,
+      "label_sources": {
+        "verified_pause_footer": 1
+      },
+      "completion_label_sources": {},
+      "measurement_scopes": {
+        "control_segment": 1
+      },
+      "best_hp_fraction_at_recorded_completion": null,
+      "completion_hp_reading_count": 0,
+      "best_in_combat_counter_gain_at_recorded_completion": null,
+      "completion_counter_gain_reading_count": 0,
+      "first_recorded_date": "2026-10-23",
+      "last_recorded_date": "2026-10-23",
+      "end_scene_only_without_completed_flag": 0
+    },
+    {
+      "danger": 0,
       "wave": 1,
       "retained_record_count": 4,
       "recorded_completion_segments": 4,
@@ -326,26 +360,29 @@
     {
       "danger": 0,
       "wave": 2,
-      "retained_record_count": 1,
-      "recorded_completion_segments": 1,
+      "retained_record_count": 3,
+      "recorded_completion_segments": 2,
       "recorded_death_segments": 0,
-      "unresolved_or_interrupted_segments": 0,
+      "unresolved_or_interrupted_segments": 1,
       "full_wave_coverage_explicitly_verified_segments": 0,
       "label_sources": {
-        "legacy_inspected_capture_annotation": 1
+        "legacy_inspected_capture_annotation": 1,
+        "verified_pause_footer": 2
       },
       "completion_label_sources": {
-        "legacy_inspected_capture_annotation": 1
+        "legacy_inspected_capture_annotation": 1,
+        "verified_pause_footer": 1
       },
       "measurement_scopes": {
-        "legacy_trial_annotation": 1
+        "legacy_trial_annotation": 1,
+        "control_segment": 2
       },
       "best_hp_fraction_at_recorded_completion": 1.0,
-      "completion_hp_reading_count": 1,
+      "completion_hp_reading_count": 2,
       "best_in_combat_counter_gain_at_recorded_completion": null,
       "completion_counter_gain_reading_count": 0,
       "first_recorded_date": "2026-10-18",
-      "last_recorded_date": "2026-10-18",
+      "last_recorded_date": "2026-10-23",
       "end_scene_only_without_completed_flag": 0
     },
     {
@@ -376,26 +413,102 @@
     {
       "danger": 0,
       "wave": 4,
+      "retained_record_count": 2,
+      "recorded_completion_segments": 2,
+      "recorded_death_segments": 0,
+      "unresolved_or_interrupted_segments": 0,
+      "full_wave_coverage_explicitly_verified_segments": 0,
+      "label_sources": {
+        "legacy_inspected_capture_annotation": 1,
+        "verified_pause_footer": 1
+      },
+      "completion_label_sources": {
+        "legacy_inspected_capture_annotation": 1,
+        "verified_pause_footer": 1
+      },
+      "measurement_scopes": {
+        "legacy_trial_annotation": 1,
+        "control_segment": 1
+      },
+      "best_hp_fraction_at_recorded_completion": 1.0,
+      "completion_hp_reading_count": 2,
+      "best_in_combat_counter_gain_at_recorded_completion": 99,
+      "completion_counter_gain_reading_count": 1,
+      "first_recorded_date": "2026-10-18",
+      "last_recorded_date": "2026-10-23",
+      "end_scene_only_without_completed_flag": 0
+    },
+    {
+      "danger": 0,
+      "wave": 5,
       "retained_record_count": 1,
       "recorded_completion_segments": 1,
       "recorded_death_segments": 0,
       "unresolved_or_interrupted_segments": 0,
       "full_wave_coverage_explicitly_verified_segments": 0,
       "label_sources": {
-        "legacy_inspected_capture_annotation": 1
+        "verified_pause_footer": 1
       },
       "completion_label_sources": {
-        "legacy_inspected_capture_annotation": 1
+        "verified_pause_footer": 1
       },
       "measurement_scopes": {
-        "legacy_trial_annotation": 1
+        "control_segment": 1
       },
       "best_hp_fraction_at_recorded_completion": 1.0,
       "completion_hp_reading_count": 1,
       "best_in_combat_counter_gain_at_recorded_completion": null,
       "completion_counter_gain_reading_count": 0,
-      "first_recorded_date": "2026-10-18",
-      "last_recorded_date": "2026-10-18",
+      "first_recorded_date": "2026-10-23",
+      "last_recorded_date": "2026-10-23",
+      "end_scene_only_without_completed_flag": 0
+    },
+    {
+      "danger": 0,
+      "wave": 6,
+      "retained_record_count": 1,
+      "recorded_completion_segments": 1,
+      "recorded_death_segments": 0,
+      "unresolved_or_interrupted_segments": 0,
+      "full_wave_coverage_explicitly_verified_segments": 0,
+      "label_sources": {
+        "verified_pause_footer": 1
+      },
+      "completion_label_sources": {
+        "verified_pause_footer": 1
+      },
+      "measurement_scopes": {
+        "control_segment": 1
+      },
+      "best_hp_fraction_at_recorded_completion": 1.0,
+      "completion_hp_reading_count": 1,
+      "best_in_combat_counter_gain_at_recorded_completion": null,
+      "completion_counter_gain_reading_count": 0,
+      "first_recorded_date": "2026-10-23",
+      "last_recorded_date": "2026-10-23",
+      "end_scene_only_without_completed_flag": 0
+    },
+    {
+      "danger": 0,
+      "wave": 7,
+      "retained_record_count": 1,
+      "recorded_completion_segments": 0,
+      "recorded_death_segments": 0,
+      "unresolved_or_interrupted_segments": 1,
+      "full_wave_coverage_explicitly_verified_segments": 0,
+      "label_sources": {
+        "verified_pause_footer": 1
+      },
+      "completion_label_sources": {},
+      "measurement_scopes": {
+        "control_segment": 1
+      },
+      "best_hp_fraction_at_recorded_completion": null,
+      "completion_hp_reading_count": 0,
+      "best_in_combat_counter_gain_at_recorded_completion": null,
+      "completion_counter_gain_reading_count": 0,
+      "first_recorded_date": "2026-10-23",
+      "last_recorded_date": "2026-10-23",
       "end_scene_only_without_completed_flag": 0
     },
     {
@@ -619,6 +732,20 @@
       "first_recorded_date": "2026-10-23",
       "last_recorded_date": "2026-10-23",
       "end_scene_only_without_completed_flag": 0
+    }
+  ],
+  "operator_reports": [
+    {
+      "report_id": "OPERATOR-D0-W7-20261023",
+      "danger": 0,
+      "wave": 7,
+      "reported_outcome": "death",
+      "provenance": "explicit_user_report_in_current_session",
+      "associated_measurement_id": "MEAS-079",
+      "archive_outcome": "unresolved_or_interrupted",
+      "archive_end_scene": "operator_stop",
+      "terminal_death_independently_verified": false,
+      "note": "The user reports losing Wave 7. The retained segment stopped before a verified death endpoint; do not replace its last observed HP with zero."
     }
   ]
 }

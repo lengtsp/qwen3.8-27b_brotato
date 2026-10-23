@@ -83,6 +83,7 @@ Install vLLM separately using its platform guide. Point orchestration/scoring cl
 | [Hy-Memory](https://github.com/Tencent-Hunyuan/Hy-Memory) | Separate between-wave gameplay-memory experiment | No; not the mandatory live store |
 | Mem0 | Studied alternative; `mem0ai` absent from inspected controller environment | No |
 | [AgentGarten](https://github.com/MirroS-Lab/AgentGarten) | Research reference for review/practice ideas | No; not an engine installed inside the keyboard loop |
+| [PresentMon](https://github.com/GameTechDev/PresentMon) 2.6.0 console | Optional portable frame-time measurement tool. A local trace attempt was denied by Windows permissions; no game-render FPS result was obtained | No; [measurement status](PERFORMANCE_STATUS.md) |
 
 Only gameplay experience is relevant to the memory entries above. Document ingestion, OCR, document RAG/embeddings and document graph stores are outside this inventory.
 
