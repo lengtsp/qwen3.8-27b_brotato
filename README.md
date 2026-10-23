@@ -40,33 +40,21 @@ This snapshot contains **70 canonical retained controller records** after exclud
 
 ### Model-specific evaluation
 
-Held-out scene accuracy, acceptable-action-set agreement and model inference p50/p95 have **not yet been measured in the published evaluation card**. Their fields remain `null`. Controller timing and software test counts must not be presented as model accuracy or intelligence. [Model evaluation card](docs/evidence/model-evaluation-card.json)
+Held-out scene accuracy, acceptable-action-set agreement and controlled model inference p50/p95 have **not yet been measured in the published evaluation card**. Their fields remain `null`. Historical operational GPU timing is reported separately below; it is not a held-out model-quality comparison. [Model evaluation card](docs/evidence/model-evaluation-card.json)
 
-## Conceptual workflow
+## Tested system paths
 
-![Conceptual workflow: current-pixel control, asynchronous model proposals, human handoff and bounded memory review](docs/assets/workflow-research.png)
+![NATIVE-01: recorded CPU movement and explicit rejected GPU-steering branch](docs/assets/tested-control-system.png)
 
-*AI-generated explanatory illustration, not a benchmark result. [Generation prompt](docs/assets/workflow-prompt.txt).*
+**Native test, 2026-10-19 · Danger 2 / Wave 1:** 225 command ACKs, 211 distinct source frames and historically reviewed completion HP **16/16**. Qwen ran **26 GPU assessments**, but **zero GPU steering directions were applied** because they missed the source-age limit. Initial model scene context was used; CPU paths supplied movement. GPU inference median/p95 was **541.877/658.279 ms** in this run. ACKs do not verify every displacement; autonomous coverage of the entire wave was not established.
 
-The private prototype uses a closed loop:
+![Executed memory tests: four gameplay-advice trials and four real archive-review requests](docs/assets/tested-memory-experiments.png)
 
-**Capture → perceive → plan → validate current evidence → short keyboard action → observe the result.**
+**Separate executed experiments:** the upper lane reports the four gameplay-advice trials above. The lower lane reports four real Qwen archive-review requests on two segments: three empty outputs and one draft marked **needs revision, do not promote**. There was **no game input and no policy promotion** in that archive review. Neither test establishes a gameplay benefit from memory.
 
-A fast CPU loop handles current geometry and input checks. Qwen assessments run asynchronously through resident vLLM and Simple-JEV. Short observation history supports association and bounded motion forecasts. Episodic advice can influence eligible preferences; post-control review drafts remain separate candidate lessons. A remembered coordinate or an untested procedure cannot authorize a keypress.
+These illustrations reconstruct historical executed paths. They replace figures containing an unexecuted protocol; separate tests do not establish a new end-to-end validation. Human choices cover character, weapon, difficulty, Level up, Shop and items. Current gameplay must be verified before an enabled session resumes movement.
 
-Human choices cover character, starting weapon, difficulty, Level up, Shop and item selection. An existing authorized session can continue after current gameplay is verified. No autonomous self-improvement or monotonic gain after every run is claimed.
-
-## System diagram views
-
-![System architecture: Windows capture/input, CPU planning, GPU proposals, browser telemetry and human decisions](docs/assets/system-architecture.png)
-
-*Deployment and control/data flow. Only current validated CPU dispatch owns native keyboard actions; model and memory outputs are advisory. [Prompt](docs/assets/system-architecture-prompt.txt).*
-
-![Memory and evaluation: existing retrieval versus untested lesson drafts and proposed held-out comparisons](docs/assets/memory-evaluation-system.png)
-
-*Memory mechanisms are separate from untested candidates. The dashed evaluation section is a proposed protocol; it does not demonstrate a memory benefit. [Prompt](docs/assets/memory-evaluation-prompt.txt).*
-
-[Diagram explanations and scope](docs/SYSTEM_DIAGRAMS.md)
+[Figures and prompts](docs/SYSTEM_DIAGRAMS.md) · [Evidence crosswalk](docs/TESTED_SYSTEM_EVIDENCE.md) · [Scalar manifest](docs/evidence/tested-system-evidence.json)
 
 ## Techniques and intended benefits
 
@@ -105,6 +93,8 @@ These are adaptations of selected ideas, not reproductions of the original syste
 
 ## Resources in the local prototype
 
+**[Installation requirements and upstream GitHub projects](docs/INSTALLATION.md)** — machine roles, inspected versions, Simple-JEV/Hermes source pins, model serving and optional components. This covers game control; document RAG is outside its scope.
+
 | Component | Role |
 |---|---|
 | Windows capture worker | Selected game-window observations and original geometry/timestamps |
@@ -127,13 +117,13 @@ Whole-system hardware minimums and universal FPS guarantees have not been establ
 
 ```text
 README.md                  Research overview and selected measured outcomes
-docs/                      Methods, architecture, research mapping and limitations
+docs/                      Methods, tested architecture, dependencies and research mapping
 docs/evidence/             Selected aggregate JSON and an unmeasured model-evaluation card
-docs/assets/               One interface example, workflow and system diagrams with prompts
+docs/assets/               One interface example and evidence-bound system figures with prompts
 ```
 
 [Concise Facebook post in Thai](docs/FACEBOOK_POST_TH.txt) · [Detailed Thai project review](docs/PROJECT_REVIEW_TH.md) · [Publication scope](docs/KNOWLEDGE.md) · [Third-party notices](THIRD_PARTY_NOTICES.md)
 
-This repository contains no runnable controller distribution or installation instructions. Raw traces, detailed game knowledge, private memory databases, model weights and full runtime code are not part of the current public tree. Historical validation records describe a previous private-source snapshot, not tests runnable from this showcase.
+This repository provides an upstream dependency/installation inventory, but no runnable controller distribution. The private integration is also needed to operate the complete system. Raw traces, detailed game knowledge, private memory databases, model weights and full runtime code are not part of the current public tree. Historical validation records describe previous private-source snapshots, not tests runnable from this showcase.
 
 Brotato and its artwork belong to their rights holders. This independent project is not affiliated with or endorsed by Blobfish or Epic Games. The public main branch has been rebuilt from this research-only snapshot without earlier implementation commits as ancestors. Existing external clones, copies and cached objects are outside that branch-history change.

@@ -16,7 +16,7 @@ The post does not transfer published performance gains to this prototype. It dis
 
 The checkpoint must be documented for model benchmarks; a local Qwen serving alias does not verify upstream provenance. The observed distribution was Epic Games Store; Steam remains unverified. Preview FPS is separate from reasoning/action latency. No Qwen fine-tuning is claimed.
 
-The workflow infographic is conceptual artwork, not a result plot. See [image](assets/workflow-research.png), [prompt](assets/workflow-prompt.txt), [research mapping](RESEARCH.md) and [benchmark protocol](EXPERIMENTS.md).
+The current [system figures](SYSTEM_DIAGRAMS.md) reconstruct specific historically executed native-control and memory-review tests, with dates, evidence IDs and prompts. The unexecuted held-out protocol remains a textual [research method](EXPERIMENTS.md), outside these figures. See the [evidence crosswalk](TESTED_SYSTEM_EVIDENCE.md) and [research mapping](RESEARCH.md).
 
 ## Techniques, functional changes and measured improvement
 

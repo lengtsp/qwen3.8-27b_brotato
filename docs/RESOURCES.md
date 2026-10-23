@@ -1,6 +1,6 @@
 # Resource context of the local prototype
 
-This is experimental context, not an installation guide. The operational code, agent policies, templates and private datasets are maintained separately from this research showcase.
+See [installation requirements](INSTALLATION.md) for game-control packages, upstream repositories, inspected versions and preparation steps. Operational code, agent policies, templates and private datasets remain separate from this showcase. Document ingestion and document RAG are outside this resource inventory.
 
 | Resource | Role | Reproducibility limitation |
 |---|---|---|

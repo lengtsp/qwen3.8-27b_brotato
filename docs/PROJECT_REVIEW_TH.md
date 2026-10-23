@@ -102,4 +102,6 @@ GitHub ฉบับเผยแพร่เน้นแนวคิด วิธ
 
 ## บันทึก Danger / Wave และแผนภาพระบบ
 
-ดู [บันทึกความคืบหน้าตาม Danger และ Wave](WAVE_PROGRESS.md) สำหรับสถานะที่มีหลักฐาน รวมทั้งด่านที่หยุด แพ้ หรือยังไม่ทราบผล และดู [system diagrams](SYSTEM_DIAGRAMS.md) สำหรับภาพสถาปัตยกรรมและวงจร memory/evaluation
+ดู [บันทึกความคืบหน้าตาม Danger และ Wave](WAVE_PROGRESS.md) สำหรับสถานะที่มีหลักฐาน รวมทั้งด่านที่หยุด แพ้ หรือยังไม่ทราบผล ส่วน [system diagrams](SYSTEM_DIAGRAMS.md) แสดงเฉพาะเส้นทางระบบที่มีบันทึกการทดสอบจริง พร้อมวันที่และ [หลักฐานประกอบ](TESTED_SYSTEM_EVIDENCE.md) โดยแยกการควบคุมเกมออกจากการทดลอง memory และไม่รวมแผนประเมินที่ยังไม่ได้รันไว้ในภาพ
+
+รายการโปรแกรมที่ต้องเตรียม รุ่นที่ตรวจพบ และ GitHub ต้นทาง เช่น windows-capture, vLLM, Simple-JEV และ Hermes อยู่ใน [installation requirements](INSTALLATION.md) ครอบคลุมเฉพาะระบบช่วยเล่นเกม โดยไม่รวมระบบเอกสาร RAG

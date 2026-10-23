@@ -11,12 +11,10 @@
 !/docs/evidence/
 /docs/assets/*
 !/docs/assets/SCREENSHOTS.md
-!/docs/assets/workflow-prompt.txt
 !/docs/assets/control-room-live.png
-!/docs/assets/workflow-research.png
-!/docs/assets/system-architecture.png
-!/docs/assets/memory-evaluation-system.png
-!/docs/assets/system-architecture-prompt.txt
-!/docs/assets/memory-evaluation-prompt.txt
+!/docs/assets/tested-control-system.png
+!/docs/assets/tested-memory-experiments.png
+!/docs/assets/tested-control-system-prompt.txt
+!/docs/assets/tested-memory-experiments-prompt.txt
 /docs/evidence/*
 !/docs/evidence/*.json

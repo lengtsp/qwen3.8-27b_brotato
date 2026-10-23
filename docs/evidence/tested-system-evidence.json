@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-23",
+  "purpose": "Bind figures to executed historical tests and separate native observations, real archive-model calls, offline replay and mock validation.",
+  "new_game_input_sent_for_this_documentation_update": false,
+  "new_model_performance_experiment_run": false,
+  "single_current_end_to_end_validation_claimed": false,
+  "entries": [
+    {
+      "id": "NATIVE-01",
+      "date": "2026-10-19",
+      "kind": "documented_native_gameplay_retest",
+      "danger": 2,
+      "wave": 1,
+      "control_path": [
+        "selected_window_capture",
+        "cpu_visual_decision_and_routes",
+        "source_and_scope_validation",
+        "window_message_input",
+        "recorded_gameplay_observations"
+      ],
+      "native_command_ack_count": 225,
+      "distinct_recorded_source_frames": 211,
+      "visually_reviewed_wave_completion": true,
+      "displayed_hp_at_completion": "16/16",
+      "historically_reviewed_floor_and_body_positions_changed": true,
+      "independent_per_key_displacement_verified": false,
+      "full_wave_autonomous_coverage_verified": false,
+      "cpu_decision_ms": {
+        "count": 225,
+        "median": 45.47,
+        "p95": 109.52,
+        "max": 171.48
+      },
+      "source_command_interval_ms": {
+        "count": 224,
+        "median": 63.75,
+        "p95": 132.514,
+        "max": 229.467
+      },
+      "native_renewal_gap_ms": {
+        "count": 218,
+        "median": 0.0,
+        "p95": 24.916,
+        "max": 55.371
+      },
+      "gpu_assessment_count": 26,
+      "gpu_inference_ms": {
+        "count": 26,
+        "median": 541.877,
+        "p95": 658.279,
+        "max": 663.439
+      },
+      "gpu_directions_applied": 0,
+      "gpu_role": "Initial same-wave scene context was used; all steering directions missed the existing source-age limit in this run. CPU paths supplied movement.",
+      "human_scope": "No character, restart, Level up or Shop choice sent; completion left for the human.",
+      "evidence_review": "Existing native report and scalar receipts reviewed; retained screenshots were historically visually inspected. No new per-frame annotation audit was conducted for this figure.",
+      "private_source_digests": {
+        "native_metrics_sha256": "1a411bd6e0dd6d7065a0c90553a0b367bd3ce54e92e1a7585ba6d33064a7d974",
+        "native_report_sha256": "f690cb652637b9c256224192045d3f4583dc6d9ac546165d93b08bded8056266",
+        "visual_review_receipt_sha256": "e1f58df1130e54908617fff84b8e8c68189c8a34912a4a6a9728b45bbea11bf4"
+      },
+      "limits": [
+        "One historical run, not a validation of every current prototype feature.",
+        "Input ACKs do not prove each key changed game state.",
+        "GPU inference presence did not imply steering influence in this run."
+      ]
+    },
+    {
+      "id": "GAMEPLAY-MEMORY-01",
+      "date": "2026-10-18",
+      "kind": "four_completed_exploratory_native_trials",
+      "danger": 0,
+      "wave": 1,
+      "trial_counter_gains": {
+        "baseline_A": 22,
+        "advice_A": 17,
+        "baseline_B": 25,
+        "advice_B": 23
+      },
+      "final_hp_all_trials": "16/16",
+      "trial_count": 4,
+      "trials_per_condition_per_comparison": 1,
+      "unknown_rng": true,
+      "gpu_proposals_applied_in_baseline_B": 1,
+      "memory_benefit_established": false,
+      "public_source": "wave1-memory-summary.json",
+      "limits": [
+        "Different comparisons and stochastic encounters are not an independent controlled win-rate study.",
+        "This is gameplay advice, distinct from reviewer-error feedback."
+      ]
+    },
+    {
+      "id": "ARCHIVE-REVIEW-01",
+      "date": "2026-10-23",
+      "kind": "four_real_resident_model_requests_on_archived_segments",
+      "archived_segment_count": 2,
+      "real_request_count": 4,
+      "executed_path": [
+        "source_linked_archived_segment_export",
+        "bounded_visual_evidence_request",
+        "resident_qwen_review",
+        "schema_and_source_reference_checks",
+        "stored_empty_or_candidate_receipt"
+      ],
+      "review_feedback_is_separate_from_gameplay_advice": true,
+      "arms": {
+        "without_feedback": {
+          "requests": 2,
+          "schema_valid": 2,
+          "nonempty_drafts": 0,
+          "pattern_flags": 0,
+          "median_wall_ms": 4737.6900000000005
+        },
+        "with_feedback": {
+          "requests": 2,
+          "schema_valid": 2,
+          "nonempty_drafts": 1,
+          "pattern_flags": 1,
+          "median_wall_ms": 16173.76
+        }
+      },
+      "empty_output_count": 3,
+      "nonempty_draft_count": 1,
+      "nonempty_draft_inspection": "needs_revision_do_not_promote",
+      "independent_semantic_ground_truth": false,
+      "candidate_policy_promotions": 0,
+      "game_inputs_sent": false,
+      "model_weight_updates": false,
+      "gameplay_evaluation_episodes": 0,
+      "gameplay_memory_gain": null,
+      "base_requests_matched_except_feedback": true,
+      "resident_model_process_unchanged": true,
+      "private_source_digest_sha256": "4976aa65180163b756b0361f368ac44f169ef8cd2eead29b0e14e10783faf013",
+      "limits": [
+        "Two archived segments, one stochastic pair each; too small for an improvement claim.",
+        "Schema/source-reference validity is not semantic truth.",
+        "The nonempty draft was flagged and not promoted.",
+        "This is an executed archive-review pilot, not a new live learning or gameplay evaluation loop."
+      ]
+    },
+    {
+      "id": "REPLAY-01",
+      "date": "2026-10-18",
+      "kind": "offline_repeated_image_replay_with_memory_only_input_adapter",
+      "public_source": "continuity-replay-continuity.json",
+      "live_game_input": false,
+      "model_speedup_measured": false
+    },
+    {
+      "id": "SOFTWARE-01",
+      "date": "2026-10-23",
+      "kind": "synthetic_and_mocked_regression_of_prior_export",
+      "public_source": "publication-validation.json",
+      "supports_native_gameplay_claim": false
+    }
+  ],
+  "excluded_from_current_figures": [
+    "Unexecuted held-out gameplay protocol",
+    "Automatic candidate-to-live-policy promotion",
+    "Proven learning or survival improvement",
+    "Training or fine-tuning pipeline",
+    "A combined current end-to-end validation that did not occur"
+  ]
+}

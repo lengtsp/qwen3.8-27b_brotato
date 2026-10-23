@@ -1,0 +1,18 @@
+Generated with the built-in image generation tool on 2026-10-23.
+Purpose: reconstruct specifically executed historical tests from reviewed evidence.
+
+Replace the proposed-evaluation diagram with a system diagram of TWO ACTUALLY EXECUTED historical experiments. Retain the professional dark navy, teal/purple/amber style, clear English text and landscape format. Remove every proposed protocol, practice/evaluation split, held-out metrics panel, future evaluation arrow and live self-improvement loop. Rebuild as two clearly separated horizontal evidence lanes.
+Title "EXECUTED MEMORY EXPERIMENTS".
+Subtitle "Two separate historical tests with recorded results".
+TOP LANE labeled "GAMEPLAY-MEMORY-01 · Native trials · 2026-10-18".
+Flow boxes "Advice OFF / ON conditions" → "Early-wave game control" → "Inspected HUD outcomes". To the right a small exact 3-column table:
+headers "Comparison | Baseline | Advice"
+rows "A | 22 | 17" and "B | 25 | 23".
+Under table: "In-combat counter gain". Below this lane clearly "Final HP: 16/16 in all four trials". Notes "One observation per condition per comparison · RNG unknown · Baseline B applied one GPU proposal". Do not imply matched seeds, current planner, or proven improvement. This lane compares existing gameplay advice, not reviewer feedback.
+BOTTOM LANE labeled "ARCHIVE-REVIEW-01 · Real Qwen calls · 2026-10-23".
+Flow boxes "2 archived control segments" → "Bounded evidence export" → "Qwen review: feedback OFF / frozen feedback ON" → "Schema & source-reference checks" → two outcome boxes "3 empty outputs" and "1 candidate draft". Show four actual model requests total. The candidate draft goes only to amber/red endpoint "Needs revision · do not promote". No arrow from candidate back into live gameplay or memory advice. Put a visible stop boundary labeled "0 policy promotions · No game input".
+Small note "Reviewer-feedback memory was tested separately from gameplay advice." Another note "Schema-valid output is not verified semantic truth."
+Bottom band exactly "Gameplay benefit from memory: not established".
+Footer "Executed tests, not a new integrated learning loop · No Qwen weight fine-tuning".
+Small evidence badge "Sources: GAMEPLAY-MEMORY-01 and ARCHIVE-REVIEW-01".
+Only use these supplied counts and outcomes. Do not invent future metrics, accuracy, confidence intervals, model-score improvements or guaranteed performance. Original abstract icons only; no game artwork, wiki content, code, credentials or local file paths.

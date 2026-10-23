@@ -14,7 +14,7 @@ The running local project and its private resources are retained separately. Thi
 
 ## Illustrative material
 
-One reviewed archived Control Room screenshot remains as an interface example. The workflow and system diagrams use abstract symbols and contain no game sprites. Neither image is an annotation dataset or proof of improved play. A concise abstract observation can illustrate the approach without distributing game mechanics:
+One reviewed archived Control Room screenshot remains as an interface example. Current system diagrams use abstract symbols and show specific historically executed tests linked in the [evidence crosswalk](TESTED_SYSTEM_EVIDENCE.md). They contain no game sprites and are not annotation datasets or proof of improved play. Unexecuted protocols are kept outside those figures. A concise abstract observation can illustrate the approach without distributing game mechanics:
 
 ```json
 {

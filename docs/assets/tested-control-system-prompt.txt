@@ -1,0 +1,23 @@
+Generated with the built-in image generation tool on 2026-10-23.
+Purpose: reconstruct specifically executed historical tests from reviewed evidence.
+
+Edit this system diagram into a precise evidence-bound diagram of ONE actually executed historical native gameplay test. Retain the professional dark navy, teal, purple, amber visual style and landscape layout, but redesign boxes and remove unsupported general architecture features.
+Exact main title: "OBSERVED NATIVE CONTROL PATH".
+Subtitle: "NATIVE-01 · Danger 2 / Wave 1 · 2026-10-19".
+This is a system diagram of a documented real test, not a proposed architecture. Every path below is from that test. No future protocol.
+Main teal cycle: "Selected game window" → "Capture observations" → "CPU perception & route decisions" → "Current-source validation" → "Scoped native key transport" → back to Selected game window. Show clear arrow directions. Only the CPU validation node connects to the native key transport. Use arrow-key icon, no game artwork.
+The upper purple branch: capture observations → "Resident Qwen / vLLM + Simple-JEV" with small text "26 GPU assessments". Split into two explicitly different observed roles: (1) "Scene-context check" connects to the initial CPU admission/start point, labeled "Initial context used"; (2) "Steering age check" ends at a red blocked endpoint labeled "0 GPU directions applied". No live steering arrow should emerge from that blocked branch. Small note "GPU assessments were recorded; CPU paths supplied movement in this run." Do not claim GPU chose the actual keys.
+Right-side observed-results panel with exactly "225 native command ACKs", "211 distinct source frames", "Completion HP: 16/16", and "Floor/body positions changed in retained captures". Separate amber end-of-wave box "Level up / Shop → human" with note "No build choice sent". The test left the game for manual menu handling.
+Bottom gray box "Session record & timing receipts" receives records from the CPU chain only. No memory-to-planner feedback arrow, no candidate learner, no neural renderer, no model training, no universal eight-direction claim, no latest-frame/main-backup feature unless already specified above, and no browser-preview claim for this particular test.
+Footer text: "Historical native observation · ACKs do not verify every individual displacement · Full-wave autonomous coverage not established".
+Small evidence badge "Source: NATIVE-01 / tested-system-evidence.json".
+No additional numeric scores, FPS, percentages or timings. Use only the supplied exact numbers and labels. Make text legible and the scope very clear.
+
+Technical correction after visual review:
+Use case: infographic-diagram edit.
+Edit target: the supplied OBSERVED NATIVE CONTROL PATH image. Preserve all measured counts, dates, labels, colors, box order and scope caveats.
+Make only these narrow technical corrections:
+1. Change the enclosing teal container heading "LOCAL BACKEND · CPU" to "OBSERVED CONTROL LOOP", because a selected Windows game window is not a CPU backend process.
+2. Add a clean, clearly arrow-headed input connector from the Capture observations box upward into the Resident Qwen / vLLM + Simple-JEV box. Label it "Captured observation". Route it through free space on the left of the model block without crossing other connectors or text. This is input data to the model, not an output arrow back to capture.
+3. Change "Records from CPU path only" inside the Session record & timing receipts box to "Recorded session observations".
+Keep all other substantive content unchanged: 26 GPU assessments, 0 GPU directions applied, CPU supplied movement, 225 command ACKs, 211 distinct source frames, completion HP16/16 and all limitations. Do not add any claims or metrics.
