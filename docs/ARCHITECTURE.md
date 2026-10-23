@@ -26,3 +26,7 @@ Main/backup intent can preserve a current collectible objective while checking a
 Eight directions include two orthogonal keys for diagonals. Human choices cover character, weapon, difficulty, Level up, Shop and items. Current gameplay must be verified before an existing session continues.
 
 Short visual history, episodic experience, candidate review and reviewer-error feedback are distinct mechanisms. Draft lessons do not automatically enter live control. [Technique/evidence mapping](TECHNIQUES_AND_EVIDENCE.md) and [benchmark methods](EXPERIMENTS.md) distinguish intended benefits from established results.
+
+## Additional system views
+
+See [two system diagrams](SYSTEM_DIAGRAMS.md) for deployment/control flow and the separation of local memory mechanisms from proposed evaluation. The diagrams are explanatory illustrations, not new benchmark results.

@@ -25,3 +25,7 @@ The Facebook draft distinguishes mechanisms in the private local prototype, hist
 The only numeric speed comparison added is the existing [continuity replay aggregate](evidence/continuity-replay-continuity.json): scalar versus accelerated CPU median 123.20 → 78.52 ms, a reduction of approximately 36.27%; command interval median 145.406 → 100.994 ms; renewal-gap steps 14 → 0. Each mode recorded 25 steps with timing for 23. This was offline repeated-image replay with a memory-only input adapter, not a new live game run, model-inference benchmark or causal memory comparison. Do not combine these numbers with the separate acceleration microbenchmark.
 
 Eight directions, retained objectives, alternative current paths and projectile crossing checks are capability changes. Their existence does not establish increased collection or HP retention. Player/weapon separation is an additional heuristic, not a measured detector accuracy gain. Reflection adds source-linked inspectability; it has no demonstrated positive gameplay effect in the available memory trial.
+
+## Presentation versions
+
+The concise [Facebook draft](FACEBOOK_POST_TH.txt) keeps the objective, major techniques, the existing offline CPU result, human handoff and evidence limits. The longer technical/research explanation is preserved in the [Thai project review](PROJECT_REVIEW_TH.md). Additional [system views](SYSTEM_DIAGRAMS.md) and [Danger/Wave ledger](WAVE_PROGRESS.md) provide detail in the research repository without distributing controller code.

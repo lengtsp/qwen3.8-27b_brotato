@@ -4,6 +4,6 @@
 - One archived Control Room screenshot includes game artwork for limited interface illustration. No ownership or blanket relicensing of that artwork is claimed. Game binaries/source, detailed reference catalogs, icon/sprite collections and calibration datasets are not distributed in the current public tree.
 - Simple-JEV, vLLM, Qwen, NumPy and other project components are named to explain the private prototype and its experimental context. Their implementations, packages and model weights are not bundled here; upstream terms apply to separately obtained components.
 - Research papers remain the work of their authors. The references explain adapted ideas; their published results are not results of this project.
-- The workflow infographic was created using the built-in image generation tool with abstract symbols. It is a conceptual explanation, not official game artwork or a measured result. The prompt is included alongside it.
+- The workflow and system diagram illustrations were created using the built-in image generation tool with abstract symbols. They are conceptual explanations, not official game artwork or measured results. Generation and technical-correction prompts are included alongside the images.
 
 No blanket license is assigned to third-party content or the private controller. Public documentation does not provide a distribution of the full implementation. The public branch contains a new research-only history; existing external copies and caches are not covered by that branch reset.

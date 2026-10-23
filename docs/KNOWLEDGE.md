@@ -14,7 +14,7 @@ The running local project and its private resources are retained separately. Thi
 
 ## Illustrative material
 
-One reviewed archived Control Room screenshot remains as an interface example. The workflow infographic uses abstract symbols and contains no game sprites. Neither image is an annotation dataset or proof of improved play. A concise abstract observation can illustrate the approach without distributing game mechanics:
+One reviewed archived Control Room screenshot remains as an interface example. The workflow and system diagrams use abstract symbols and contain no game sprites. Neither image is an annotation dataset or proof of improved play. A concise abstract observation can illustrate the approach without distributing game mechanics:
 
 ```json
 {
@@ -28,4 +28,4 @@ One reviewed archived Control Room screenshot remains as an interface example. T
 
 The public JSON reports are selected aggregate transcriptions, not a raw evaluation dataset. Benchmark methods and missing metadata are disclosed so readers can judge the practical limits. The historical validation count refers to a prior implementation snapshot; source/tests are not distributed here.
 
-At the owner's request, the public main branch is rebuilt from this 24-file research-only snapshot with no earlier implementation commits as ancestors. Previous development history is retained in a local private backup outside this repository. The branch-history reset does not guarantee erasure of pre-existing external clones, copies or cached/unreachable objects.
+At the owner's request, the public main branch is rebuilt from an initial research-only snapshot with no earlier implementation commits as ancestors. Previous development history is retained in a local private backup outside this repository. The branch-history reset does not guarantee erasure of pre-existing external clones, copies or cached/unreachable objects.

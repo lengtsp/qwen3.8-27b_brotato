@@ -28,6 +28,16 @@ CPU median decreased by approximately **36.27% in this offline replay comparison
 
 **A memory benefit has not been established.** There was one completed observation per condition in each comparison, encounter RNG was unknown, and Trial B's baseline applied one GPU proposal. These trials predate the current local planner. They establish neither a causal memory penalty nor improved perception. [Selected aggregates](docs/evidence/wave1-memory-summary.json) · [Methods and limitations](docs/EXPERIMENTS.md)
 
+### Recorded Danger / Wave progression
+
+| Danger | Waves with a recorded completion endpoint | Other observed waves without confirmed completion | Recorded death waves |
+|---|---|---|---|
+| 0 | 1, 2, 3, 4 | — | — |
+| 2 | 1, 2, 4 | 7 | — |
+| 4 | 6, 7 | 5, 8 | 8 |
+
+This snapshot contains **70 canonical retained controller records** after excluding one duplicate legacy baseline; 16 observation-only records are excluded from agent-control claims. Difficulty provenance varies between inspected Pause pixels, operator labels and legacy capture annotations. Unknown Danger/wave records remain separate. A completion endpoint does **not** verify autonomous control of the entire wave, and no full-run victory is established. Missing earlier waves are not inferred from later progress. [Per-wave evidence, HP/counter readings and coverage map](docs/WAVE_PROGRESS.md) · [Sanitized aggregate JSON](docs/evidence/danger-wave-progress.json)
+
 ### Model-specific evaluation
 
 Held-out scene accuracy, acceptable-action-set agreement and model inference p50/p95 have **not yet been measured in the published evaluation card**. Their fields remain `null`. Controller timing and software test counts must not be presented as model accuracy or intelligence. [Model evaluation card](docs/evidence/model-evaluation-card.json)
@@ -45,6 +55,18 @@ The private prototype uses a closed loop:
 A fast CPU loop handles current geometry and input checks. Qwen assessments run asynchronously through resident vLLM and Simple-JEV. Short observation history supports association and bounded motion forecasts. Episodic advice can influence eligible preferences; post-control review drafts remain separate candidate lessons. A remembered coordinate or an untested procedure cannot authorize a keypress.
 
 Human choices cover character, starting weapon, difficulty, Level up, Shop and item selection. An existing authorized session can continue after current gameplay is verified. No autonomous self-improvement or monotonic gain after every run is claimed.
+
+## System diagram views
+
+![System architecture: Windows capture/input, CPU planning, GPU proposals, browser telemetry and human decisions](docs/assets/system-architecture.png)
+
+*Deployment and control/data flow. Only current validated CPU dispatch owns native keyboard actions; model and memory outputs are advisory. [Prompt](docs/assets/system-architecture-prompt.txt).*
+
+![Memory and evaluation: existing retrieval versus untested lesson drafts and proposed held-out comparisons](docs/assets/memory-evaluation-system.png)
+
+*Memory mechanisms are separate from untested candidates. The dashed evaluation section is a proposed protocol; it does not demonstrate a memory benefit. [Prompt](docs/assets/memory-evaluation-prompt.txt).*
+
+[Diagram explanations and scope](docs/SYSTEM_DIAGRAMS.md)
 
 ## Techniques and intended benefits
 
@@ -107,10 +129,10 @@ Whole-system hardware minimums and universal FPS guarantees have not been establ
 README.md                  Research overview and selected measured outcomes
 docs/                      Methods, architecture, research mapping and limitations
 docs/evidence/             Selected aggregate JSON and an unmeasured model-evaluation card
-docs/assets/               One interface example, workflow infographic and prompt
+docs/assets/               One interface example, workflow and system diagrams with prompts
 ```
 
-[Facebook post in Thai](docs/FACEBOOK_POST_TH.txt) · [Publication scope](docs/KNOWLEDGE.md) · [Third-party notices](THIRD_PARTY_NOTICES.md)
+[Concise Facebook post in Thai](docs/FACEBOOK_POST_TH.txt) · [Detailed Thai project review](docs/PROJECT_REVIEW_TH.md) · [Publication scope](docs/KNOWLEDGE.md) · [Third-party notices](THIRD_PARTY_NOTICES.md)
 
 This repository contains no runnable controller distribution or installation instructions. Raw traces, detailed game knowledge, private memory databases, model weights and full runtime code are not part of the current public tree. Historical validation records describe a previous private-source snapshot, not tests runnable from this showcase.
 

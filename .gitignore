@@ -14,5 +14,9 @@
 !/docs/assets/workflow-prompt.txt
 !/docs/assets/control-room-live.png
 !/docs/assets/workflow-research.png
+!/docs/assets/system-architecture.png
+!/docs/assets/memory-evaluation-system.png
+!/docs/assets/system-architecture-prompt.txt
+!/docs/assets/memory-evaluation-prompt.txt
 /docs/evidence/*
 !/docs/evidence/*.json

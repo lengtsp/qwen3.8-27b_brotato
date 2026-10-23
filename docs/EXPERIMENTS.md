@@ -46,3 +46,7 @@ The prior private-source validation included synthetic projectile tests covering
 The original optional Hy-Memory experiment established extraction/retrieval feasibility outside the action hot loop. It did not establish better collection, better perception or a trained policy. GPU proposal acceptance is also separate from visual execution success.
 
 Older aggregate timing files remain examples of measurement definitions; they are fixture/version-specific, not a leaderboard of current model capabilities. The archived screenshot is an interface illustration only.
+
+## Recorded progression by Danger and wave
+
+The [progress ledger](WAVE_PROGRESS.md) and [sanitized aggregates](evidence/danger-wave-progress.json) describe retained completion endpoints, deaths, unresolved segments and difficulty-label provenance. They are not independent full-wave trials or a win-rate estimate. Unknown labels are not reconstructed from neighboring waves.
