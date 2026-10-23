@@ -2,6 +2,12 @@
 
 These figures show **specific historical executed paths**, with dates and evidence IDs. They replace conceptual figures that included an unexecuted evaluation protocol. They do not claim a new integrated test of every current feature.
 
+## Accessible overview in Thai
+
+![Accessible Thai workflow overview grounded in recorded historical tests](assets/workflow-overview-th.png)
+
+One illustration for a general audience: observe pixels, plan a pickup route, send a short arrow command and inspect the result. Human menu choices and experimental memory are shown separately. The CPU/GPU caption retains the native test's zero-admitted-GPU-steering limitation, and the footer states that these are separate historical tests. It does not demonstrate an automatic learning benefit. [Prompt](assets/workflow-overview-th-prompt.txt) · [Evidence](TESTED_SYSTEM_EVIDENCE.md)
+
 ## Native game-control path
 
 ![Recorded native path: CPU movement, model assessments and explicit zero admitted GPU directions](assets/tested-control-system.png)
@@ -24,6 +30,6 @@ The lower lane is **ARCHIVE-REVIEW-01 · 2026-10-23**, two archived segments and
 
 ## Image provenance
 
-Both diagrams were made with the built-in image generation tool on 2026-10-23 from reviewed reports and scalar observations, then visually checked. The native diagram received a narrow correction to its container label, model-input connector and records caption. These are explanatory reconstructions, not original-run screenshots or official game artwork. No game sprites or private reference catalogs are included.
+All three diagrams were made with the built-in image generation tool on 2026-10-23 from reviewed reports and scalar observations, then visually checked. The native diagram received a narrow correction to its container label, model-input connector and records caption. These are explanatory reconstructions, not original-run screenshots or official game artwork. No game sprites or private reference catalogs are included.
 
 The separate [archived interface screenshot](assets/control-room-live.png) does not show that all UI features were exercised in these tests. [Architecture](ARCHITECTURE.md) · [Research](RESEARCH.md) · [Danger/Wave ledger](WAVE_PROGRESS.md) · [Installation](INSTALLATION.md)

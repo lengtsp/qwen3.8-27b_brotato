@@ -6,6 +6,12 @@ This project studies visual game control using a privately maintained local prot
 
 The central question is whether existing vision-language models, current-geometry control and bounded memory can improve responsiveness, collection and survival **without fine-tuning the Qwen model**. Model quality and full-agent performance are evaluated separately.
 
+## Workflow overview in Thai
+
+![Thai overview: observe the game, plan a pickup route, send short arrow-key movements and observe again; human menu choices and separate experimental memory](docs/assets/workflow-overview-th.png)
+
+An accessible summary of historically executed paths, with human menu handoff and memory limits. The referenced native run used CPU movement; GPU analysis ran but supplied no admitted steering direction. Separate tests are not a single current integrated validation. [Evidence](docs/TESTED_SYSTEM_EVIDENCE.md) · [Image prompt](docs/assets/workflow-overview-th-prompt.txt)
+
 ## What has been measured
 
 ### Historical CPU / command-continuity replay

@@ -16,5 +16,7 @@
 !/docs/assets/tested-memory-experiments.png
 !/docs/assets/tested-control-system-prompt.txt
 !/docs/assets/tested-memory-experiments-prompt.txt
+!/docs/assets/workflow-overview-th.png
+!/docs/assets/workflow-overview-th-prompt.txt
 /docs/evidence/*
 !/docs/evidence/*.json

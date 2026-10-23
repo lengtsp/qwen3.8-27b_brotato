@@ -1,6 +1,7 @@
 # Public visual examples
 
 - `control-room-live.png`: reviewed archived interface screenshot, not a current UI specification, benchmark dataset or proof of improved gameplay.
+- `workflow-overview-th.png`: one accessible Thai overview for a general audience, based on the same historical executed tests and retaining human handoff, zero admitted GPU steering in the native reference and unestablished memory benefit. [Prompt](workflow-overview-th-prompt.txt).
 - `tested-control-system.png`: built-in-image-tool reconstruction of **NATIVE-01**, the 2026-10-19 native retest. Shows CPU movement and zero applied GPU steering directions. [Prompt/correction](tested-control-system-prompt.txt).
 - `tested-memory-experiments.png`: reconstruction of **GAMEPLAY-MEMORY-01** and **ARCHIVE-REVIEW-01**, separate executed tests; no promotion or established memory gameplay benefit. [Prompt](tested-memory-experiments-prompt.txt).
 

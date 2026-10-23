@@ -1,0 +1,62 @@
+Built-in image generation mode. Generated 2026-10-23.
+Purpose: one accessible Thai overview grounded in existing executed tests.
+
+Use case: infographic-diagram.
+Asset type: ONE finished Thai-language workflow overview for a Facebook post and research GitHub README. Create a new original bitmap infographic, preferably portrait 4:5 around 1536x1920, with very readable Thai. Audience: people who are not technical. Emphasize simple story and clarity, not technical architecture complexity.
+
+Primary request: Explain how an AI game assistant observes Brotato, finds a pickup route, sends short movement commands and checks the result, while humans handle menus. Use only historically executed paths described below. Do not imply guaranteed good play, accepted GPU steering in the cited native run, automatic memory learning benefits, or an untested integrated system.
+
+Visual design: clean polished Thai editorial infographic, warm ivory background, dark navy Thai sans-serif type (Noto Sans Thai style), teal main workflow, purple model-advice card, warm amber human card. Flat original illustrations: computer screen with a generic rectangular arena, small abstract player dot, collectible dots and hazards; path; arrow keys; eye; person; notebook. NO game screenshots, sprites, character artwork, official logos, actual game catalogs or proprietary assets. Airy spacing, large text, straightforward clearly directed connectors. Keep all text fully inside margins. All explanatory copy in Thai, with product names and CPU/GPU allowed.
+
+EXACT VISIBLE COPY AND LAYOUT:
+
+Top title, largest type:
+"AI ช่วยเล่น Brotato ทำงานอย่างไร?"
+Subtitle:
+"ดูภาพ → วางทาง → กดเดิน → ดูผลใหม่"
+
+Short start banner with person icon:
+"คนเตรียมเกม"
+"เลือกตัวละคร อาวุธ และความยาก"
+
+Main centerpiece: four large numbered rounded cards in a 2x2 serpentine loop. Connect 1 → 2 → 3 → 4 → 1 with clear teal arrowheads. Place 1 top left, 2 top right, 3 bottom right, 4 bottom left. No ambiguous crossed arrows.
+Card 1:
+"1 ดูภาพหน้าจอ"
+"หาตัวผู้เล่น ของบนพื้น และอันตราย"
+Card 2:
+"2 วางทางไปเก็บของ"
+"ใช้ภาพล่าสุดตรวจทางเดิน"
+Card 3:
+"3 กดปุ่มให้เดิน"
+"ขยับสั้น ๆ ด้วยปุ่มลูกศร"
+Card 4:
+"4 ดูผลแล้วคิดใหม่"
+"ตรวจตำแหน่งและเลือดที่เหลือ"
+Small teal caption immediately beneath loop:
+"วงจร CPU ตรวจภาพและส่งปุ่ม"
+
+Compact purple side/support card ABOVE the main loop or in a separate clear band, attached by one purple advisory arrow to Card 2:
+"ผู้ช่วยวิเคราะห์ภาพ"
+"Qwen + vLLM + Simple-JEV"
+"ช่วยประเมินฉาก แยกจากวงจรกดปุ่ม"
+Small purple explanatory note directly attached to this card, readable:
+"รอบอ้างอิง: GPU วิเคราะห์แล้ว แต่ยังไม่ได้เลือกทิศเดิน"
+This note is important: the cited real native run had model assessments, initial scene context used, zero GPU directions admitted. DO NOT draw a model-to-keyboard direct arrow.
+
+Below main loop, a full-width amber human-handoff card reached by a branch from Card 1, with person and menu icon:
+"เจอเมนู → หยุดรอคนเลือก"
+"เลเวลอัป • ร้านค้า • เลือกไอเท็ม"
+No automatic menu-choice claims. No return arrow that implies a newly validated end-to-end menu/resume test.
+
+Bottom result/memory band, visually separate from the main live-control loop, connected by a light gray reporting arrow from Card 4:
+"บันทึกผลเพื่อเปรียบเทียบ"
+"ของที่เก็บได้ • เลือดคงเหลือ • ผ่านหรือแพ้"
+Small separate note with notebook icon, no feedback arrow into live movement:
+"ความจำยังอยู่ระหว่างทดลอง"
+"ยังไม่ยืนยันว่าช่วยให้เล่นดีขึ้น"
+
+Small footer, two short lines:
+"สรุปจากบันทึกทดสอบจริงหลายชุด ไม่ใช่ผลรันทดสอบครบระบบในครั้งเดียว"
+"อ้างอิง: NATIVE-01 / GAMEPLAY-MEMORY-01 / ARCHIVE-REVIEW-01"
+
+Accuracy constraints: This is an accessible reconstruction of historical tested workflows, not a new performance benchmark. Do not add FPS, win rates, speedups, diagrams of training, document RAG or an automatic self-improvement feedback loop. No invented statistics. Keep technical product names secondary to Thai user-level explanations. Create ONE image only.
