@@ -1,0 +1,26 @@
+{
+  "model": "Qwen/Qwen3.5-0.8B",
+  "state": {
+    "phase": "gameplay",
+    "player": [0.5, 0.5],
+    "target": [0.8, 0.5],
+    "visible_hazards": [],
+    "coordinate_system": "square arena; x right, y down; synthetic example"
+  },
+  "questions": {
+    "direction": {
+      "type": "choice",
+      "instructions": "Which movement makes progress toward the target? Treat this as advice only.",
+      "criteria": {
+        "up": null,
+        "up_right": null,
+        "right": null,
+        "down_right": null,
+        "down": null,
+        "down_left": null,
+        "left": null,
+        "up_left": null
+      }
+    }
+  }
+}

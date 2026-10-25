@@ -7,6 +7,7 @@ __pycache__/
 *.jsonl
 output/
 *.bundle
+.venv*/
 
 # Social-media drafts are kept locally.
 docs/FACEBOOK_POST_*.txt

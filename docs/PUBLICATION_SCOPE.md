@@ -1,10 +1,12 @@
 # Public research scope
 
-The author publishes concepts, selected aggregate benchmarks, limitations, citations and original explanatory artwork.
+The author publishes concepts, selected aggregate benchmarks, limitations, citations, original explanatory artwork and a small beginner tutorial with original educational code.
 
-Excluded from this edition: the working controller and executable helpers; full prompts/configuration; raw event traces, databases and private chat; model weights; complete experimental outputs; game screenshots/artwork/icons; scraped wiki collections and detailed game mechanics.
+The `examples/` directory contains a synthetic CPU planner, its checks, a one-frame model client and a synthetic classifier request. These are teaching examples, not extracted production-controller code or evidence of completing a real wave.
 
-Brotato is mentioned only as the motivating test environment. The infographic uses a single generic arena sketch created for this research presentation.
+Excluded from this edition: the working controller and its production helpers; full production prompts/configuration; raw event traces, databases and private chat; model weights; complete experimental outputs; game screenshots/artwork/icons; scraped wiki collections and detailed game mechanics.
+
+Brotato is mentioned only as the motivating test environment. The explanatory images use generic geometric sketches created for this research presentation.
 
 The complete local project and prior publication history were preserved privately before the public main branch was rebuilt as a presentation edition. Historical downloads, external copies and hosting caches are outside the control of this branch update. This repository does not claim to revoke or blanket-relicense third-party content.
 

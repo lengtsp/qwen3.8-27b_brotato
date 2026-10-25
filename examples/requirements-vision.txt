@@ -1,0 +1,3 @@
+# Optional one-frame capture/inspection only. The CPU tutorial is stdlib-only.
+mss>=10
+Pillow>=11

@@ -1,6 +1,6 @@
 # Experimental resources and component roles
 
-This is a research inventory, not a turnkey installation package or a minimum-hardware guarantee. Complete controller code, prompts and deployment recipes are not distributed here.
+This is a research inventory, not a turnkey installation package or a minimum-hardware guarantee. A [beginner tutorial](TUTORIAL.md) explains installation and small teaching examples. Complete controller code, production prompts and deployment recipes are not distributed here.
 
 | Resource | Role in the prototype |
 |---|---|

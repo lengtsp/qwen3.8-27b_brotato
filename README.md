@@ -2,11 +2,23 @@
 
 A research project by **[lengtsp](https://github.com/lengtsp)** investigating computer-use control from screenshots, hybrid CPU/GPU decisions, and bounded experience memory.
 
-This public edition presents concepts, selected aggregate measurements and unresolved limitations. The working controller, implementation details, complete traces, game knowledge collections and commercial game imagery are excluded.
+This public edition presents concepts, selected aggregate measurements, unresolved limitations and a beginner tutorial with educational examples. The working controller, production implementation details, complete traces, game knowledge collections and commercial game imagery are excluded.
 
-![Original research infographic showing CPU/GPU/memory responsibilities, selected benchmark results and unresolved limitations](docs/assets/research-overview.png)
+<p align="center">
+  <img src="docs/assets/system-architecture-en.png" alt="English system architecture: current images feed CPU control, GPU advice and visual memory; human operators handle menus" width="100%">
+</p>
 
-*Original AI-generated explanatory artwork, reviewed against the measurements below. The small arena sketch is generic. The diagram summarizes component interfaces; separate experiments do not establish a validated autonomous system.*
+*Original English architecture diagram. The image keeps its natural landscape proportions. It summarizes experimental component interfaces; the integrated system has not demonstrated reliable autonomous completion. [Figure notes](docs/FIGURES.md).*
+
+## Try a small example
+
+Start with the [beginner installation and code tutorial](docs/TUTORIAL.md). It includes a CPU-only first-wave walkthrough, an optional Qwen image-inspection client, and upstream setup examples for Simple-JEV and visual Memory.
+
+```bash
+python examples/one_wave.py
+```
+
+The walkthrough uses invented observations and prints movement recommendations. It does not press game keys, load a model or reproduce the gameplay benchmarks. Human menu choices and the complete Control Room remain outside the public example.
 
 ## What is being studied
 
@@ -50,6 +62,7 @@ These are partial conceptual adaptations, not reproductions of the full framewor
 
 ## Presentation materials
 
+- [Beginner tutorial and code examples](docs/TUTORIAL.md)
 - [Infographic and evidence notes](docs/FIGURES.md)
 - [Resources used in the experiments](docs/RESOURCES.md)
 - [Public scope](docs/PUBLICATION_SCOPE.md) · [Rights notices](THIRD_PARTY_NOTICES.md)
