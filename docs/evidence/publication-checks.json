@@ -1,0 +1,17 @@
+{
+  "scope": "presentation-only public edition",
+  "files_before_checks_record": 11,
+  "controller_source_included": false,
+  "game_images_included": false,
+  "game_wiki_corpus_included": false,
+  "raw_traces_included": false,
+  "new_original_explanatory_images": 1,
+  "secret_pattern_check": "passed",
+  "relative_links": "passed",
+  "source_history_backup_verified": true,
+  "local_controller_retained": true,
+  "benchmark_claims_are_selected_aggregates": true,
+  "image_sha256": "507b05f60d2cf2cf9fd90be083e68557ffc89f22c392a5a7190a7f29229559bf",
+  "social_media_drafts_included": false,
+  "private_drafts_preserved_locally": true
+}

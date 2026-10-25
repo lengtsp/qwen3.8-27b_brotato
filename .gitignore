@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.env
+*.sqlite*
+*.db
+*.log
+*.jsonl
+output/
+*.bundle
+
+# Social-media drafts are kept locally.
+docs/FACEBOOK_POST_*.txt
