@@ -10,7 +10,7 @@ import threading
 import unittest
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
-from inspect_frame import request_json
+from inspect_frame import PROJECT_ROOT, project_path, request_json
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -65,15 +65,18 @@ class ClientTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "larger"):
             request_json(self.base + "/large")
 
+    def test_relative_paths_use_repository_root(self):
+        self.assertEqual(project_path("output/result.json"), PROJECT_ROOT / "output/result.json")
+        self.assertEqual(project_path(str(PROJECT_ROOT / "input.png")), PROJECT_ROOT / "input.png")
+
     @unittest.skipUnless(importlib.util.find_spec("PIL"), "Install optional vision requirements")
     def test_archival_image_reports_usage_and_never_becomes_actionable(self):
         examples = Path(__file__).resolve().parent
-        image = examples.parent / "docs/assets/system-architecture-en.png"
         with tempfile.TemporaryDirectory() as directory:
             output = Path(directory) / "observation.json"
-            command = [sys.executable, str(examples / "inspect_frame.py"), "--image", str(image),
+            command = [sys.executable, str(examples / "inspect_frame.py"), "--image", "assets/system-architecture-en.png",
                        "--base-url", self.base, "--out", str(output)]
-            subprocess.run(command, check=True, capture_output=True, text=True)
+            subprocess.run(command, check=True, capture_output=True, text=True, cwd=directory)
             result = json.loads(output.read_text())
             self.assertFalse(result["actionable"])
             self.assertIn("archival", result["source"])
@@ -84,7 +87,7 @@ class ClientTests(unittest.TestCase):
             Handler.finish_reason = "length"
             try:
                 output.unlink()
-                failed = subprocess.run(command, capture_output=True, text=True)
+                failed = subprocess.run(command, capture_output=True, text=True, cwd=directory)
                 self.assertNotEqual(failed.returncode, 0)
                 self.assertFalse(output.exists())
                 self.assertIn("token limit", failed.stderr)

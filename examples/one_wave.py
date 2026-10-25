@@ -1,6 +1,8 @@
 """Educational decisions for a synthetic first wave; never sends game input.
 
 Run with Python 3.12+: python examples/one_wave.py
+Or use an absolute script path from any directory. --show-root prints the
+repository root calculated from this file; no machine-specific path is needed.
 Coordinates use a square toy arena: (0, 0) top-left, (1, 1) bottom-right.
 The fixtures, speeds, radii and weights are invented teaching values.
 """
@@ -10,7 +12,12 @@ from __future__ import annotations
 import json
 import math
 import time
+import argparse
 from dataclasses import dataclass
+from pathlib import Path
+
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 
 DIRECTIONS = {
@@ -160,6 +167,12 @@ def demo_frames():
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--show-root", action="store_true", help="Print the detected repository root and exit")
+    args = parser.parse_args()
+    if args.show_root:
+        print(PROJECT_ROOT)
+        return
     planner = Planner()
     for now_s, scene, frame in demo_frames():
         started = time.perf_counter()

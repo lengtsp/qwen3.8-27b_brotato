@@ -2,11 +2,22 @@
 
 import math
 import unittest
+from pathlib import Path
+import subprocess
+import sys
+import tempfile
 
 from one_wave import DIRECTIONS, Planner, demo_frames, separation_during_step
 
 
 class PlannerTests(unittest.TestCase):
+    def test_root_is_detected_from_outside_the_project(self):
+        root = Path(__file__).resolve().parent.parent
+        with tempfile.TemporaryDirectory() as directory:
+            output = subprocess.check_output([sys.executable, str(root / "examples/one_wave.py"), "--show-root"],
+                                             cwd=directory, text=True)
+        self.assertEqual(Path(output.strip()), root)
+
     def frame(self, **changes):
         return dict(demo_frames()[0][2], **changes)
 

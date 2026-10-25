@@ -1,4 +1,8 @@
-"""Inspect ONE selected frame through vLLM. No game input or capture loop."""
+"""Inspect ONE selected frame through vLLM. No game input or capture loop.
+
+PROJECT_ROOT is derived from this file, never from a fixed machine path.
+Relative --image and --out paths are resolved from that repository root.
+"""
 
 import argparse
 import base64
@@ -8,6 +12,15 @@ import os
 from pathlib import Path
 import time
 import urllib.request
+
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
+
+def project_path(value):
+    """Accept absolute paths or resolve a relative path from PROJECT_ROOT."""
+    path = Path(value).expanduser()
+    return path if path.is_absolute() else PROJECT_ROOT / path
 
 
 PROMPT = """Inspect this one game image. Return one JSON object, no markdown:
@@ -39,11 +52,12 @@ def request_json(url, payload=None, api_key=""):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     source = parser.add_mutually_exclusive_group(required=True)
-    source.add_argument("--image", type=Path, help="Your own local image; treated as archival")
+    source.add_argument("--image", type=project_path, help="Your image; relative paths start at PROJECT_ROOT; treated as archival")
     source.add_argument("--capture", nargs=4, type=int, metavar=("LEFT", "TOP", "WIDTH", "HEIGHT"), help="One region on the visible desktop")
     parser.add_argument("--base-url", default="http://127.0.0.1:18130/v1")
     parser.add_argument("--model", help="Required only when the endpoint lists multiple models")
-    parser.add_argument("--out", type=Path, default=Path("output/tutorial-observation.json"))
+    parser.add_argument("--out", type=project_path, default=PROJECT_ROOT / "output/tutorial-observation.json",
+                        help="JSON output; relative paths start at PROJECT_ROOT")
     args = parser.parse_args()
     from PIL import Image
 
@@ -108,6 +122,7 @@ def main():
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({k: v for k, v in result.items() if k != "observation"}, indent=2))
+    print("Project root:", PROJECT_ROOT)
     print("Observation saved to", args.out)
 
 

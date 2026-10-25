@@ -11,3 +11,7 @@ output/
 
 # Social-media drafts are kept locally.
 docs/FACEBOOK_POST_*.txt
+
+# Earlier documentation and social drafts remain in the local workspace only.
+/docs/
+/THIRD_PARTY_NOTICES.md
