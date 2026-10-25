@@ -11,10 +11,23 @@ This public repository contains a beginner tutorial and small educational exampl
 ## Control Room preview
 
 <p align="center">
-  <img src="assets/control-room-gameplay.png" alt="Actual historical Control Room screenshot showing the Brotato game view beside CPU planning and movement logs" width="100%">
+  <img src="assets/control-room-path-overlay-replay.png" alt="Read-only Control Room overlay replay: eight candidate directions, a green proposed pickup route, a body box, HUD regions and CPU replay observations" width="100%">
 </p>
 
-*Actual Control Room capture from a test on 18 October 2026. The Thai UI, FP8 model label, displayed counters and timings reflect that historical session. This is an interface example, not a new benchmark or proof of autonomous wave completion. No game input was sent to produce this publication update.*
+*Overlay preview captured on 25 October 2026 in an isolated, read-only Control Room renderer. A previously recorded Wave 2 image was processed by the CPU planner. The green route, eight candidate directions, body box and HUD boxes come from that evaluation. The screen explicitly says OFFLINE REPLAY: no model inference or game input was executed. The displayed processing time is a single replay observation, separate from the benchmark samples below.*
+
+The view shows where the controller intends to move, its alternatives and its chosen pickup target. Colored lines describe proposed paths; they do not establish that movement or collection succeeded.
+
+<details>
+<summary>Earlier capture from a live Control Room session — 18 October 2026</summary>
+
+<p align="center">
+  <img src="assets/control-room-gameplay.png" alt="Historical Control Room screenshot showing the Brotato game view beside CPU planning and movement logs" width="100%">
+</p>
+
+The Thai UI, FP8 model label, displayed counters and timings reflect that historical session. This is an interface example, not a new benchmark or proof of autonomous wave completion.
+
+</details>
 
 ## System architecture
 
@@ -323,6 +336,8 @@ After a Resume-handoff fix, a 12-second observation recorded 96 exploratory puls
 
 The proposed diagonal corner-search recovery is software-tested locally. Its live benefit is unmeasured; sending a heading does not prove arrival at a corner or establish a player coordinate.
 
+The latest local correction prioritizes a currently checked plan over random/square exploration. Blind-search configuration no longer enables square steering during normal planning; a short perception gap can retain the original strategic clock without renewing old body/path evidence. A newly acknowledged collection plan replaces the previous search heading, and returning to checked movement clears the search overlay state. Automatic five-second down-right search is no longer the default. GPU advice can continue receiving fresh sources during the recovery state. These changes passed offline behavior/integration checks; a live gameplay improvement has not yet been measured.
+
 ## Research foundations
 
 | Work | Idea adapted in this project |
@@ -341,6 +356,6 @@ Player/weapon separation, occlusion and stale model output remain unresolved pro
 
 The public examples use invented states and teaching parameters. They are not extracted game code, a trained policy, a working replacement for the private controller or a reproduction of the published experiments. Qwen weights are not fine-tuned in this project; stored cases and reflective lesson drafts do not by themselves demonstrate self-improvement.
 
-Brotato and the game content visible in the single Control Room capture belong to their rights holders. The experiment used an Epic Games Store installation. This project is not affiliated with or endorsed by the game's creators, Epic Games or Steam. No game installation, sprite/icon collection, scraped wiki corpus, model weights, raw traces, private chat or production controller is distributed here. The architecture artwork and synthetic examples were created for this presentation; cited software and models retain their own terms and licenses.
+Brotato and the game content visible in the Control Room captures belong to their rights holders. The experiment used an Epic Games Store installation. This project is not affiliated with or endorsed by the game's creators, Epic Games or Steam. No game installation, sprite/icon collection, scraped wiki corpus, model weights, raw traces, private chat or production controller is distributed here. The architecture artwork and synthetic examples were created for this presentation; cited software and models retain their own terms and licenses.
 
 Social-media drafts and earlier detailed notes stay local. This README contains the installation tutorial, selected results, research references and explanatory material for the public examples.
