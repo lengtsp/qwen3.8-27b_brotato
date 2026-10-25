@@ -4,11 +4,39 @@ A research project by **[lengtsp](https://github.com/lengtsp)** studying how an 
 
 This public repository contains a beginner tutorial and small educational examples. The complete experimental controller and Control Room implementation remain private. The runnable examples print recommendations or inspect one image; they do not control a game automatically.
 
-- [Control Room preview](#control-room-preview) · [System architecture](#system-architecture)
+- [Gameplay video](#gameplay-video-first-60-seconds) · [Control Room preview](#control-room-preview) · [System architecture](#system-architecture)
+- [Latest software update](#latest-software-update-25-october-2026)
 - [Project root and paths](#project-root-and-paths) · [Install and run](#1-choose-the-parts-you-want-to-try)
 - [Measured results](#benchmarks-and-observations) · [Research foundations](#research-foundations)
 
+## Gameplay video (first 60 seconds)
+
+<p align="center">
+  <a href="assets/danger2-first60s.mp4">
+    <img src="assets/danger2-first60s-preview.gif" alt="Four-second animated preview of recorded Control Room gameplay with route overlay; click to open the full 60-second MP4" width="100%">
+  </a>
+</p>
+
+[Open the video](assets/danger2-first60s.mp4) · [Download MP4](https://github.com/lengtsp/qwen3.8-27b_brotato/raw/refs/heads/main/assets/danger2-first60s.mp4) · 60 seconds · 1280 × 668 · H.264/AAC · approximately 2.49 MB.
+
+**Full gameplay video:** [Watch the full gameplay on Facebook](https://web.facebook.com/leng.thsphl/posts/pfbid0Xh7P5ioyTwyBCyd3NoCw4poGASuZzrSap39jjdkjmkitXG9RfdTDv3wDER2CB6yel).
+
+The animated preview loops four seconds from the clip at a reduced preview frame rate; use the MP4 for the full excerpt.
+
+The first minute was trimmed and resized from the user-provided file labeled **Danger 2, Waves 1–6**. This excerpt shows recorded Wave 1 play, a transition/menu period and part of Wave 2; it does not contain all six waves. The original five-minute recording remains local. This footage illustrates the recorded controller and its real overlay/logs; its controller revision is not independently mapped to a commit, so it is not used to measure the latest recovery correction.
+
 ## Control Room preview
+
+<p align="center">
+  <a href="assets/danger2-first60s.mp4">
+    <img src="assets/gameplay-first60s-preview.jpg" alt="Frame 15 seconds into the actual recording, showing eight movement directions, a pickup target and CPU/GPU logs; click to open the 60-second video" width="100%">
+  </a>
+</p>
+
+*Frame extracted at 15 seconds from the supplied recording. The overlay and log entries were present in the recorded Control Room. The displayed model is Qwen3.8 NVFP4. Click the preview to open the 60-second clip.*
+
+<details>
+<summary>Separate offline CPU overlay replay — archived image, no game input</summary>
 
 <p align="center">
   <img src="assets/control-room-path-overlay-replay.png" alt="Read-only Control Room overlay replay: eight candidate directions, a green proposed pickup route, a body box, HUD regions and CPU replay observations" width="100%">
@@ -17,6 +45,8 @@ This public repository contains a beginner tutorial and small educational exampl
 *Overlay preview captured on 25 October 2026 in an isolated, read-only Control Room renderer. A previously recorded Wave 2 image was processed by the CPU planner. The green route, eight candidate directions, body box and HUD boxes come from that evaluation. The screen explicitly says OFFLINE REPLAY: no model inference or game input was executed. The displayed processing time is a single replay observation, separate from the benchmark samples below.*
 
 The view shows where the controller intends to move, its alternatives and its chosen pickup target. Colored lines describe proposed paths; they do not establish that movement or collection succeeded.
+
+</details>
 
 <details>
 <summary>Earlier capture from a live Control Room session — 18 October 2026</summary>
@@ -35,11 +65,30 @@ The Thai UI, FP8 model label, displayed counters and timings reflect that histor
   <img src="assets/system-architecture-en.png" alt="English architecture diagram showing CPU control, GPU Qwen and Simple-JEV advice, visual Memory and human menu decisions" width="100%">
 </p>
 
-*Original English black-and-white architecture diagram, 1672 × 941 pixels. Both images use their natural proportions: README sets a responsive width without fixing their height.*
+*Original English black-and-white architecture diagram, 1672 × 941 pixels. All images use their natural proportions: README sets a responsive width without fixing their height.*
 
 The CPU checks current pixels, HUD and routes and delivers keyboard commands in the private controller. Qwen through vLLM and Simple-JEV provides background advice; EmbeddingGemma 2 and SQLite supply historical visual context. Human operators choose characters, weapons, difficulty, level-up, shop and items. Preview overlays expose boxes, targets and routes for inspection; their markings are not new perception evidence.
 
 The architecture describes experimental component interfaces. Not every box is implemented in the public examples, and reliable autonomous play or a gameplay benefit from Memory has not been established.
+
+## Latest software update (25 October 2026)
+
+The latest correction gives checked collection plans priority over random recovery movement:
+
+- Configuring a blind body-search pattern no longer enables square walking during normal planning.
+- A current admissible movement leg keeps priority while a longer plan is pending. A blocked leg can still yield to a newly checked alternative.
+- A short perception gap can retain the strategic plan clock within its original source/context limits. This does not preserve old body coordinates or authorize movement from old pixels.
+- Once a target-directed movement is acknowledged, its heading replaces the earlier blind-search heading. The UI clears the search state and logs a return to the plan.
+- Automatic five-second down-right search is no longer the default. GPU advice can continue receiving fresh image sources while the controller tries to reacquire the player.
+
+| Validation | Recorded result | Scope |
+|---|---|---|
+| Focused private-controller checks | 150 passed; 3 subtests passed | Offline behavior and fake input/model integration |
+| Broader private-controller checks | 292 passed; 21 subtests passed | Offline regression checks |
+| Overlay and history JavaScript checks | Passed | Geometry, stale/context hiding, history behavior and read-only polling |
+| Public educational examples | 12 checks passed | CPU walkthrough, root paths and a mock HTTP client |
+
+These are software checks. They do not measure model accuracy, pickup totals or win rate. The correction was loaded into Control Room while autoplay was stopped; live gameplay outcomes after this change remain unmeasured. The recorded video and the separately labeled offline overlay replay above have different evidence scopes; neither is a new post-correction gameplay comparison.
 
 ## Project root and paths
 
@@ -49,7 +98,11 @@ The architecture describes experimental component interfaces. Not every box is i
 qwen3.8-27b_brotato/             <- PROJECT_ROOT: clone destination
 ├── README.md                   <- tutorial, usage and results
 ├── assets/
+│   ├── danger2-first60s.mp4
+│   ├── danger2-first60s-preview.gif
+│   ├── gameplay-first60s-preview.jpg
 │   ├── system-architecture-en.png
+│   ├── control-room-path-overlay-replay.png
 │   └── control-room-gameplay.png
 ├── examples/
 │   ├── one_wave.py              <- CPU-only planning walkthrough
@@ -330,6 +383,13 @@ These are historical segment endpoints, not proof of autonomous full-wave covera
 
 One selected Danger 0/Wave 2 completion segment has 177 native command ACKs, HP last observed 100%, and 313,419 recorded tokens (313,379 input + 40 output). Across 16 attributable historical segments, recorded response totals sum to 3,034,643 tokens. These are incomplete observed-response totals, not all-run usage or a bill; cached/uncached GPU work was not established.
 
+| Recorded usage scope | Tokens | Coverage |
+|---|---:|---|
+| Selected Danger 0 / Wave 2 completion segment | 313,419 | Observed response usage for that segment |
+| 16 attributable historical control segments | 3,034,643 | Incomplete accumulated response usage; approximately 3.03 million tokens |
+
+A control segment can cover only part of a run. Offline code checks and the new overlay replay made no model calls and add no model tokens to these historical totals.
+
 ### Current recovery observation
 
 After a Resume-handoff fix, a 12-second observation recorded 96 exploratory pulses and no repeated Pause cycle. Normal actor-grounded steps remained 0 during that observation. Rendered movement and changing counters were visible, but this does not establish planned pickup quality or robust player tracking.
@@ -356,6 +416,8 @@ Player/weapon separation, occlusion and stale model output remain unresolved pro
 
 The public examples use invented states and teaching parameters. They are not extracted game code, a trained policy, a working replacement for the private controller or a reproduction of the published experiments. Qwen weights are not fine-tuned in this project; stored cases and reflective lesson drafts do not by themselves demonstrate self-improvement.
 
-Brotato and the game content visible in the Control Room captures belong to their rights holders. The experiment used an Epic Games Store installation. This project is not affiliated with or endorsed by the game's creators, Epic Games or Steam. No game installation, sprite/icon collection, scraped wiki corpus, model weights, raw traces, private chat or production controller is distributed here. The architecture artwork and synthetic examples were created for this presentation; cited software and models retain their own terms and licenses.
+Selected game and Control Room captures are included to explain perception, planning and experimental observations. This is a curated selection rather than a complete collection of game content.
+
+Brotato and the game content visible in those captures belong to their rights holders. The experiment used an Epic Games Store installation. This project is not affiliated with or endorsed by the game's creators, Epic Games or Steam. No game installation, sprite/icon collection, scraped wiki corpus, model weights, raw traces, private chat or production controller is distributed here. The architecture artwork and synthetic examples were created for this presentation; cited software and models retain their own terms and licenses.
 
 Social-media drafts and earlier detailed notes stay local. This README contains the installation tutorial, selected results, research references and explanatory material for the public examples.
